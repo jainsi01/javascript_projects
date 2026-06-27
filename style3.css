@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    align-items: center;
+    font-family: Arial;
+}
+
+.popup{
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+
+    visibility: hidden;
+}
+
+.cross{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}

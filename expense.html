@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Expense Tracker</h2>
+
+    <input type="text" id="category" placeholder="Enter Category">
+    <input type="number" id="expense" placeholder="Enter Expense">
+    <button id="btn">Submit</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="table-header">Category</th>
+                <th class="table-header">Expense</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-body" id="expenseTable">
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td class="table-header"><b>Total</b></td>
+                <td class="table-header" id="total">0</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<script src="expense.js"></script>
+</body>
+</html>

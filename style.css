@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.video-tag {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.video {
+  width: 700px;
+  height: 700px;
+}
+.page-tag {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  top:0;
+  background-color: #fafafa25;
+}
+button{
+    border-radius: 50%;
+    padding: 20px;
+}

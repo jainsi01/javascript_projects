@@ -1,0 +1,38 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    background:wheat;
+    padding:30px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+table{
+    margin-top:20px;
+    width:350px;
+}
+
+th,td{
+    padding:10px;
+}
+.table-header{
+    background-color:lightblue;
+}
+.table-body{
+    background-color:lightgreen;
+}

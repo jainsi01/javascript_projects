@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATM Machine</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .atm{
+      background:white;
+      padding:30px;
+      width:320px;
+      border-radius:15px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+      text-align:center;
+    }
+
+    input{
+      width:90%;
+      padding:10px;
+      margin:10px 0;
+      font-size:16px;
+    }
+
+    button{
+      padding:10px 15px;
+      margin:5px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      background:#007bff;
+      color:white;
+      font-size:15px;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+
+    #message{
+      margin-top:15px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="atm">
+    <h2>ATM Machine</h2>
+
+    <h3>Balance: ₹<span id="balance">5000</span></h3>
+
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <br>
+
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script>
+    let balance = 5000;
+
+    function updateBalance() {
+      document.getElementById("balance").innerText = balance;
+    }
+
+    function deposit() {
+      let amount = Number(document.getElementById("amount").value);
+
+      if(amount <= 0){
+        document.getElementById("message").innerText =
+          "Abee Saale neend mein amount daal rha hai kya";
+        return;
+      }
+
+      balance += amount;
+
+      updateBalance();
+
+      document.getElementById("message").innerText =
+        "₹" + amount + " dal gya, ab nikal";
+    }
+
+    function withdraw() {
+      let amount = Number(document.getElementById("amount").value);
+
+      if(amount <= 0){
+        document.getElementById("message").innerText =
+          "Abee Saale neend mein amount daal rha hai kya";
+        return;
+      }
+
+      if(amount > balance){
+        document.getElementById("message").innerText =
+          "Aukaat mein reh";
+        return;
+      }
+
+      balance -= amount;
+
+      updateBalance();
+
+      document.getElementById("message").innerText =
+        "₹" + amount + " Kat gye";
+    }
+  </script>
+
+</body>
+</html>
